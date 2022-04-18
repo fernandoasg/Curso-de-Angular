@@ -1,52 +1,58 @@
-# Prerequisites
-*.d
+.DS_STORE
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+/dist/
+/bazel-out
+/integration/bazel/bazel-*
+*.log
+node_modules
 
-# Linker output
-*.ilk
-*.map
-*.exp
+# CircleCI temporary file for cache key computation.
+# See `save_month_to_file` in `.circleci/config.yml`.
+month.txt
 
-# Precompiled Headers
-*.gch
-*.pch
+# Include when developing application packages.
+pubspec.lock
+.c9
+.idea/
+.devcontainer/*
+!.devcontainer/README.md
+!.devcontainer/recommended-devcontainer.json
+!.devcontainer/recommended-Dockerfile
+.settings/
+.vscode/launch.json
+.vscode/settings.json
+.vscode/tasks.json
+*.swo
+*.swp
+modules/.settings
+modules/.vscode
+.vimrc
+.nvimrc
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+# Don't check in secret files
+*secret.js
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+# Ignore npm/yarn debug log
+npm-debug.log
+yarn-error.log
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+# build-analytics
+.build-analytics
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
+# rollup-test output
+/modules/rollup-test/dist/
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# User specific bazel settings
+.bazelrc.user
+
+# User specific ng-dev settings
+.ng-dev.user*
+
+.notes.md
+baseline.json
+
+# Ignore .history for the xyz.local-history VSCode extension
+.history
+
+# Husky
+.husky/_
