@@ -15,3 +15,13 @@
 <button [disabled]="checkedDisabled">Button</button>
 
 <img [src]="imgSrc" [title]="imgTitle">
+
+<h2>Event Binding</h2>
+
+<button (click)="alertaInfo($event)">Evento</button>
+
+<br>
+
+<div (mousemove)="mouseMoveTeste($event)" style="background: red; width: 300px; height: 300px"></div>
+
+{{ position.x }} - {{ position.y }}
