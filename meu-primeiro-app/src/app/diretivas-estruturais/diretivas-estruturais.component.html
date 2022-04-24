@@ -1,0 +1,12 @@
+<p *ngIf="condition; else elseBlock">true!</p>
+<ng-template #elseBlock>
+    <p>false!</p>
+</ng-template>
+
+<hr>
+
+<p *ngIf="conditionClick">True</p>
+
+<p *ngIf="!conditionClick">False</p>
+
+<button (click)="onClick()">Clicar</button>
