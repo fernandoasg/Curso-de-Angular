@@ -3,7 +3,9 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-    <app-diretivas-estruturais></app-diretivas-estruturais>
+    <!-- <app-title *ngIf="destruir"></app-title> -->
+    <!-- <app-diretivas-estruturais></app-diretivas-estruturais> -->
+    <app-diretivas-atributos></app-diretivas-atributos>
     <router-outlet></router-outlet>
   `
 })
