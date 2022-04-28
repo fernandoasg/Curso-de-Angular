@@ -9,6 +9,9 @@ export class DiretivasAtributosComponent implements OnInit {
 
   public valor: boolean = true;
 
+  public heigth: string = "20px";
+  public backgroundColor: string = "purple";
+
   constructor() { }
 
   ngOnInit(): void {
@@ -17,6 +20,14 @@ export class DiretivasAtributosComponent implements OnInit {
         this.valor = false;
       } else {
         this.valor = true;
+      }
+
+      if (this.heigth == "20px") {
+        this.heigth = "50px";
+        this.backgroundColor = "black";
+      } else {
+        this.heigth = "20px";
+        this.backgroundColor = "purple";
       }
     }, 2000);
   }
