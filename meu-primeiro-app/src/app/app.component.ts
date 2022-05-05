@@ -10,8 +10,11 @@ import { Component, OnInit } from '@angular/core';
       <hr/>
     </app-diretivas-atributos> 
     <app-diretivas-atributos>
-    </app-diretivas-atributos>-->
-    <app-new-component></app-new-component>
+    </app-diretivas-atributos>
+    <app-new-component></app-new-component>-->
+    <app-input [contador]="addValue"></app-input>
+    <br>
+    <button (click)="add()">ADD</button>
     <router-outlet></router-outlet>
   `
 })
@@ -20,9 +23,14 @@ export class AppComponent implements OnInit {
   public valor: number = 1;
   public destruir: boolean = true;
 
+  public addValue: number = 10;
+
   constructor() { }
 
   ngOnInit(): void {
-    
+  }
+
+  public add() {
+    this.addValue += 1;
   }
 }
