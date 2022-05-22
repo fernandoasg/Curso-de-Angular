@@ -22,6 +22,7 @@ import { Component, OnInit } from '@angular/core';
     </ng-template>
 
     <app-output (enviarDados)="setDados($event)"></app-output>-->
+    <app-food-add></app-food-add>
     <app-food-list></app-food-list>
     <router-outlet></router-outlet>
   `
