@@ -1,0 +1,16 @@
+{
+    "list-food": [
+        {
+            "id": 1,
+            "nome": "Soba"
+        },
+        {
+            "id": 2,
+            "nome": "Arroz"
+        },
+        {
+            "id": 3,
+            "nome": "Ovo"
+        }
+    ]
+}
