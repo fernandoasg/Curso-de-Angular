@@ -40,6 +40,14 @@
         <input type="checkbox" name="vue" ngModel>
     </label>
     <br><br>
+
+    <select name="comidas" ngModel>
+        <option value="">Selecione um alimento</option>
+        <option *ngFor="let item of listComidas" [ngValue]="item">
+            {{item.comida}}
+        </option>
+    </select>
+    <br><br>
 </form>
 
 <br><br>
