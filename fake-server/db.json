@@ -1,24 +1,8 @@
 {
   "list-food": [
     {
-      "id": 1,
-      "nome": "Soba"
-    },
-    {
-      "id": 2,
-      "nome": "Arroz"
-    },
-    {
-      "id": 3,
-      "nome": "Ovo"
-    },
-    {
-      "nome": "Peixe",
-      "id": 4
-    },
-    {
-      "nome": "Kafta",
-      "id": 5
+      "nome": "Soba",
+      "id": 2
     }
   ]
 }

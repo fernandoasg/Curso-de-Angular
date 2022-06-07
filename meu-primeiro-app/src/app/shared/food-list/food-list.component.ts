@@ -28,4 +28,26 @@ export class FoodListComponent implements OnInit {
     );
   }
 
+  public editFoodItem(id: number, value: string) {
+    this.foodListService.editFood(id, value).subscribe(
+      res => {
+        return console.log(res)
+      },
+      error => error
+    )
+  }
+
+  public deleteFood(id: number) {
+    return this.foodListService.deleteFood(id).subscribe(
+      res => {
+        this.foodList = this.foodList.filter(
+          item => {
+            return id !== item.id
+          }
+        )
+      },
+      error => error
+    )
+  }
+
 }
