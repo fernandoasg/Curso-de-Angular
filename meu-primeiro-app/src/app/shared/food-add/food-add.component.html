@@ -1,2 +1,2 @@
-<input #inputValue>
-<button (click)="addItem(inputValue.value)">Add Item</button>
+<input [(ngModel)]="inputValue">
+<button (click)="addItem(inputValue)">Add Item</button>
