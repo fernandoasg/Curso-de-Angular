@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SobreComponent } from './pages/sobre/sobre.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
+import { MenuComponent } from './shared/menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SobreComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
