@@ -7,7 +7,8 @@ import { SobreComponent } from './pages/sobre/sobre.component';
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'sobre', component: SobreComponent },
-  { path: '404', component: ErrorPageComponent }
+  { path: '404', component: ErrorPageComponent },
+  { path: '**', redirectTo: '404' }
 ];
 
 @NgModule({
