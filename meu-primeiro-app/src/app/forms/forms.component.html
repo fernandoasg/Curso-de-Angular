@@ -1,10 +1,16 @@
 <form #form="ngForm">
     <label>
         Nome:
-        <input type="text" name="nome" ngModel>
+        <input type="text" name="nome" #nome="ngModel" [ngModel]="nome.value" required>
+        <span *ngIf="!nome.valid && (nome.dirty && nome.touched)">
+            Invalid
+        </span>
     </label>
     <br><br>
 
+    <!--{{ form.valid }}-->
+
+    <br><br>
     <label>
         Masculino:
         <input type="radio" name="sexo" value="Masculino" ngModel>
