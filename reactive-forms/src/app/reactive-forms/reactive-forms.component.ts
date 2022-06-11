@@ -10,7 +10,8 @@ export class ReactiveFormsComponent implements OnInit {
 
   public cadastroForm: FormGroup = this.formBuilder.group({
     firstName: ['', Validators.required],
-    lastName: ['']
+    lastName: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(10)]],
+    email: ['', [Validators.required, Validators.email]]
   })
 
   constructor(private formBuilder: FormBuilder) { }
