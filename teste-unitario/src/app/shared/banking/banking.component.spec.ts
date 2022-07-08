@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ListComponent } from '../investiments/list/list.component';
+import { ListComponent } from '../investiments/components/list/list.component';
 import { BankingComponent } from './banking.component';
 
 describe('BankingComponent', () => {

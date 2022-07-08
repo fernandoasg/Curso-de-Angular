@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 // Model
-import { Investiments } from '../model/investiments';
+import { Investiments } from '../../model/investiments';
 
 @Component({
   selector: 'app-list',
@@ -25,7 +25,7 @@ export class ListComponent implements OnInit {
     },
     {
       name: "Inter",
-      value: 100
+      value: 55
     }
   ]
 
