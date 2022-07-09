@@ -8,7 +8,17 @@ import { Observable } from 'rxjs';
 export class CanLoadGuard implements CanLoad {
   canLoad(
     route: Route,
-    segments: UrlSegment[]): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return true;
+    segments: UrlSegment[]
+    ): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+
+      console.log(route);
+      console.log(segments);
+
+      if(segments[1]?.path === 'leads') {
+        return true;
+      }
+
+      alert('Módulo não foi carregado!');
+      return false;
   }
 }
