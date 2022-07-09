@@ -40,8 +40,9 @@ describe('ListComponent', () => {
     fixture.detectChanges();
     
     expect(service.list).toHaveBeenCalledWith();
+
     expect(component.investiments.length).toEqual(5);
-    
+
     expect(component.investiments[0].name).toEqual('Banco 1');
     expect(component.investiments[0].value).toEqual(100);
     expect(component.investiments[4].name).toEqual('Banco 5');
@@ -49,10 +50,16 @@ describe('ListComponent', () => {
   });
 
   it('(I) should list investiments',() => {
+    spyOn(service, 'list').and.returnValue(of(mockList));
+
+    component.ngOnInit();
+    fixture.detectChanges();
+
     let investiments = fixture.debugElement.nativeElement.querySelectorAll('.list-itens');
 
-    expect(investiments.length).toBe(4);
-    expect(investiments[0].textContent.trim()).toEqual('Itaú | 100');
-    expect(investiments[3].textContent.trim()).toEqual('Nubank | 100');
+    expect(investiments.length).toEqual(5);
+
+    expect(investiments[0].textContent.trim()).toEqual('Banco 1 | 100');
+    expect(investiments[4].textContent.trim()).toEqual('Banco 5 | 100');
   });
 });
