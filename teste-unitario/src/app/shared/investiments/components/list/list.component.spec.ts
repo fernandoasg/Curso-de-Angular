@@ -1,3 +1,4 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ListComponent } from './list.component';
@@ -8,6 +9,7 @@ describe('ListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
       declarations: [ ListComponent ]
     })
     .compileComponents();
@@ -27,7 +29,7 @@ describe('ListComponent', () => {
     let investiments = component.investiments;
     expect(investiments.length).toBe(4);
     expect(investiments[0].name).toContain("Itaú");
-    expect(investiments[3].name).toContain("Inter");
+    expect(investiments[3].name).toContain("Nubank");
   });
 
   it('(I) should list investiments',() => {
@@ -35,6 +37,6 @@ describe('ListComponent', () => {
 
     expect(investiments.length).toBe(4);
     expect(investiments[0].textContent.trim()).toEqual('Itaú | 100');
-    expect(investiments[3].textContent.trim()).toEqual('Inter | 55');
+    expect(investiments[3].textContent.trim()).toEqual('Nubank | 100');
   });
 });

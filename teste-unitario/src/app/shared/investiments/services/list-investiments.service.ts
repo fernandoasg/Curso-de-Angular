@@ -15,8 +15,8 @@ export class ListInvestimentsService {
     private http: HttpClient
   ) { }
 
-  public list():Observable<Investiments> {
-    return this.http.get<Investiments>(this.url).pipe(
+  public list():Observable<Array<Investiments>> {
+    return this.http.get<Array<Investiments>>(this.url).pipe(
       map(
         res => res
       )
