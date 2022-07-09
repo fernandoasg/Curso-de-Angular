@@ -4,6 +4,7 @@ import { AccountComponent } from './shared/account/account.component';
 
 // Guards
 import { CanActiveGuard } from './shared/guards/can-active.guard';
+import { CanDeactiveGuard } from './shared/guards/can-deactive.guard';
 
 // Component pages
 import { HomeComponent } from './shared/home/home.component';
@@ -16,7 +17,8 @@ const routes: Routes = [
   {
     path: 'account',
     component: AccountComponent,
-    canActivate: [CanActiveGuard]
+    canActivate: [CanActiveGuard],
+    canDeactivate: [CanDeactiveGuard]
   }
 ];
 
