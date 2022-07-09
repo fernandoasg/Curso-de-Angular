@@ -19,6 +19,10 @@ const routes: Routes = [
     component: AccountComponent,
     canActivate: [CanActiveGuard],
     canDeactivate: [CanDeactiveGuard]
+  },
+  {
+    path: 'core',
+    loadChildren: () => import('./core/core.module').then((m) => m.CoreModule),
   }
 ];
 
