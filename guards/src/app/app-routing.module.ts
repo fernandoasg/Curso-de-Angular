@@ -1,7 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AccountComponent } from './shared/account/account.component';
 
-const routes: Routes = [];
+// Guards
+import { CanActiveGuard } from './shared/guards/can-active.guard';
+
+// Component pages
+import { HomeComponent } from './shared/home/home.component';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: HomeComponent
+  },
+  {
+    path: 'account',
+    component: AccountComponent,
+    canActivate: [CanActiveGuard]
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
