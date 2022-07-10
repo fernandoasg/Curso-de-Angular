@@ -30,3 +30,23 @@
 body {
     background-color: var(--body);
 }
+
+.container {
+    width: 510px;
+    margin: 0 auto;
+    
+    h1 {
+        font-weight: 700;
+        font-size: 25px;
+        margin: 50px 0 10px;
+    }
+    
+    p {
+        font-weight: 400;
+        font-size: 16px;
+    }
+    
+    h1, p {
+        color: var(--text-body);
+    }
+}
